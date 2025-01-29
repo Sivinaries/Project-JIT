@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import Journey from '../components/Home/Journey'
 import Enjoy from '../components/Home/Enjoy'
 import Why from '../components/Home/Why'
+import Whatsapp from '../components/Whatsapp'
 
 function Home() {
     return (
@@ -11,6 +12,7 @@ function Home() {
             <Navbar />
             <div className='w-full mx-auto'>
                 <Hero />
+                <Whatsapp />
                 <Journey />
                 <Enjoy />
                 <Why />
