@@ -23,7 +23,7 @@ function Hero() {
           </h1>
         </div>
         <div className='grid md:flex justify-between gap-6'>
-        <div className='p-2 md:p-4 bg-cyan-500 w-full md:w-fit h-fit rounded-full order-2 md:order-none'>
+          <div className='p-2 md:p-4 bg-cyan-500 w-full md:w-fit h-fit rounded-full order-2 md:order-none'>
             <a href="">
               <h1 className='text-white font-semibold text-2xl md:text-4xl text-center px-4 md:px-6'>Book Now</h1>
             </a>
