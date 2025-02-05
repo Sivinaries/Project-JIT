@@ -47,7 +47,7 @@ function Footer() {
                 <div className="grid grid-cols-1">
                     <div className='text-center order-2 xl:order-1 p-2.5 xl:p-5 my-auto'>
                         <h1 className='font-light text-white text-center text-xs xl:text-lg 2xl:text-xl'>
-                            Copyright © 2025 Destination Asia
+                            Copyright © 2025 Java Indo Trip
                         </h1>
                     </div>
                 </div>
