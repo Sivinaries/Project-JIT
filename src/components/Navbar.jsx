@@ -2,7 +2,12 @@ import { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../assets/images/logo.svg';
-import { Link } from 'react-router-dom';
+
+const navLinks = [
+    { title: 'Our Destination', href:'#destination' },
+    { title: 'About Us', href: '#about' },
+    { title: 'Contact', href: '#contact' },
+];
 
 const Navbar = () => {
     const [showModal, setShowModal] = useState(false);
@@ -11,12 +16,6 @@ const Navbar = () => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [isScrollingUp, setIsScrollingUp] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
-
-    const navLinks = [
-        { title: 'Our Destination', to: '/destination' },
-        { title: 'About Us', to: '/about' },
-        { title: 'Contact', to: '/contact' },
-    ];
 
     useEffect(() => {
         const handleResize = () => {
@@ -117,24 +116,20 @@ const Navbar = () => {
         },
     };
 
-    if (isMobileView) {
-        navLinks.push({ title: 'Hubungi Kami', to: '/contact' });
-    }
-
     return (
         <AnimatePresence>
             {isVisible && (
                 <motion.nav className={`z-50 fixed top-0 right-0 left-0 p-2 ${isScrollingUp ? 'bg-black bg-opacity-50' : 'bg-transparent'}`} variants={navLinksVariants}>
                     <div className="flex justify-between items-center p-2 md:mx-20">
                         <div className='my-auto'>
-                            <Link className='flex items-center' to="/">
+                            <a className='flex items-center' href="#home">
                                 <div className='w-20 md:w-28 h-fit'>
                                     <img className='w-full h-full' src={logo} alt="" />
                                 </div>
                                 <div className='ml-2'>
                                     <p className='text-white text-left text-lg lg:text-xl xl:text-2xl font-light'>Java IndoTrip</p>
                                 </div>
-                            </Link>
+                            </a>
                         </div>
                         {isMobileView ? (
                             <button className="text-white">
@@ -146,11 +141,11 @@ const Navbar = () => {
                             </button>
                         ) : (
                             <div className="hidden lg:flex gap-4 xl:gap-8 items-center border-2 p-3  rounded-full">
-                                {navLinks.map((link, index) => (
-                                    <Link key={index} to={link.to} className='text-white sm:text-sm lg:text-lg xl:text-xl font-light hover:scale-110 duration-200 delay-150 px-2'>
-                                        {link.title}
-                                    </Link>
-                                ))}
+                        {navLinks.map((link, index) => (
+                            <a key={index} href={link.href} className="text-white sm:text-sm lg:text-lg xl:text-xl font-light hover:scale-110 duration-200 delay-150 px-2">
+                                {link.title}
+                            </a>
+                        ))}
                             </div>
                         )}
                     </div>
@@ -175,11 +170,11 @@ const Navbar = () => {
                                     exit="exit"
                                 >
                                     <div className="flex flex-col gap-6 sm:gap-8 justify-center mx-6 h-full text-left">
-                                        {navLinks.map((link, index) => (
-                                            <motion.span key={index} className={`text-white text-3xl font-normal ${activePage && activePage.to === link.to ? '' : ''}`} variants={linkItemVariants} onClick={closeModal}>
-                                                <Link to={link.to}>{link.title}</Link>
-                                            </motion.span>
-                                        ))}
+                                    {navLinks.map((link, index) => (
+                                    <motion.span key={index} className={`text-white text-3xl font-normal ${activePage && activePage.to === link.to ? '' : ''}`} variants={linkItemVariants} onClick={closeModal}>
+                                        <a href={link.href}>{link.title}</a>
+                                    </motion.span>
+                                ))}
                                     </div>
                                 </motion.div>
                             </motion.div>

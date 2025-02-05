@@ -5,6 +5,8 @@ import Journey from '../components/Home/Journey'
 import Enjoy from '../components/Home/Enjoy'
 import Why from '../components/Home/Why'
 import Whatsapp from '../components/Whatsapp'
+import About from '../components/Home/About'
+import Contact from '../components/Home/Contact'
 
 function Home() {
     return (
@@ -12,10 +14,12 @@ function Home() {
             <Navbar />
             <div className='w-full mx-auto'>
                 <Hero />
+                <About />
                 <Whatsapp />
                 <Journey />
                 <Enjoy />
                 <Why />
+                <Contact />
             </div>
             <Footer />
         </main>

@@ -4,6 +4,7 @@ import school from '../../assets/images/school.png'
 function Hero() {
 
   return (
+    <section id='home'>
     <div
       className="grid grid-cols-1 h-screen bg-cover w-full bg-center"
       style={{ backgroundImage: `url(${bg})` }}
@@ -36,6 +37,7 @@ function Hero() {
         </div>
       </div>
     </div>
+    </section>
   );
 }
 

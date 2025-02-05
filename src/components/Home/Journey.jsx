@@ -6,6 +6,7 @@ import { BsArrowUpRightCircle } from "react-icons/bs";
 
 function Journey() {
     return (
+        <section id='destination'>
         <div className='grid grid-cols-1 bg-black h-full'>
             <div className='my-8 md:my-20 space-y-4 md:space-y-6'>
                 <div>
@@ -71,6 +72,7 @@ function Journey() {
                 </div>
             </div>
         </div>
+        </section>
     )
 }
 
