@@ -5,7 +5,7 @@ import logo from '../assets/images/logo.svg'
 
 function Footer() {
     return (
-        <footer className="h-fit w-full bg-cyan-500 mx-auto">
+        <footer className="h-fit w-full bg-black bg-opacity-90 mx-auto">
             <div className="">
                 <div className="grid grid-cols-2 p-2 xl:p-10 space-y-4 xl:space-y-0">
                     <div className="flex justify-around col-span-2 xl:col-span-1">
