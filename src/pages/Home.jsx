@@ -7,6 +7,7 @@ import Why from '../components/Home/Why'
 import Whatsapp from '../components/Whatsapp'
 import About from '../components/Home/About'
 import Contact from '../components/Home/Contact'
+import Indo from '../components/Home/Indo'
 
 function Home() {
     return (
@@ -17,6 +18,7 @@ function Home() {
                 <About />
                 <Whatsapp />
                 <Journey />
+                <Indo />
                 <Enjoy />
                 <Why />
                 <Contact />

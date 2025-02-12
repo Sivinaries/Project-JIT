@@ -1,4 +1,4 @@
-import enjoy from '../../assets/images/enjoy.png'
+import immertion from '../../assets/images/immertion.png'
 import safe from '../../assets/images/safe.svg'
 import price from '../../assets/images/price.svg'
 import comfort from '../../assets/images/comfort.svg'
@@ -57,7 +57,7 @@ function Enjoy() {
                             </div>
                         </div>
                         <div className='md:w-1/2'>
-                            <img className='w-full h-full' src={enjoy} alt="" />
+                            <img className='w-full h-full' src={immertion} alt="" />
                         </div>
                     </div>
                 </div>
